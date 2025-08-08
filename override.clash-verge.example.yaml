@@ -1,0 +1,16 @@
+# Clash Verge 本地 Mixin 覆写模板
+# 使用方法：
+# 1) 复制本文件为 override.clash-verge.yaml 并保存在本地（不要提交到公开仓库）。
+# 2) 将占位符 URL 替换为你的真实订阅地址。
+# 3) Clash Verge → Profiles → 选中该配置 → Edit → 添加 Mixin（或粘贴内容）。
+
+proxy-providers:
+  fastfly:
+    # 将下面的占位符替换为你的真实订阅地址
+    url: "https://example.invalid/replace-with-your-private-subscription-url"
+
+# 如需自定义请求头（极少数服务商需要），可取消注释：
+#   headers:
+#     User-Agent: "Clash-Verge"
+
+

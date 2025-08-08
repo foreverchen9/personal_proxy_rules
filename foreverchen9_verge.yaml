@@ -1,0 +1,652 @@
+# ForeverChen9 代理配置文件 - 增强版本
+# 支持rule-providers的现代化配置
+
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: false
+bind-address: '*'
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: ui
+
+# Clash Verge 特殊配置
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+# 实验性功能
+experimental:
+  ignore-resolve-fail: true
+  sniff-tls-sni: true
+
+# DNS配置
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+    - 223.6.6.6
+    - 223.5.5.5
+    - 8.8.8.8
+    - 1.1.1.1
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - localhost.ptlogin2.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - +.xboxlive.com
+    - msftconnecttest.com
+    - xbox.*.microsoft.com
+    - '*.battlenet.com.cn'
+    - '*.battlenet.com'
+    - '*.blzstatic.cn'
+    - '*.battle.net'
+  nameserver:
+    - 223.6.6.6
+    - 223.5.5.5
+    - 8.8.8.8
+    - 1.1.1.1
+
+# 代理节点
+proxies: []
+
+# 代理提供商配置
+proxy-providers:
+  fastfly:
+    # 注：为避免泄露订阅信息，此处仅为占位符。
+    # 请在 Clash Verge 中通过本地 Mixin 覆盖如下 url 字段为你的真实订阅地址。
+    type: http
+    interval: 86400
+    url: https://example.invalid/replace-with-your-private-subscription-url
+    path: ./providers/fastfly.yaml
+    benchmark-url: http://cp.cloudflare.com/generate_204
+    health-check:
+      enable: true
+      interval: 600
+      url: http://cp.cloudflare.com/generate_204
+
+# 代理组配置
+proxy-groups:
+  # 主选择器
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇬🇧 英国节点
+      - 🌍 其他节点
+      - 🔧 手动切换
+      - DIRECT
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/$tash.png
+
+  # 应用特定代理组
+  - name: 📹 油管视频
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇬🇧 英国节点
+      - 🔧 手动切换
+      - DIRECT
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png
+
+  - name: 🎬 奈飞视频
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇬🇧 英国节点
+      - 🔧 手动切换
+      - DIRECT
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png
+
+  - name: 📺 哔哩哔哩
+    type: select
+    proxies:
+      - DIRECT
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/bilibilitv.png
+
+  - name: 🎵 Spotify音乐
+    type: select
+    proxies:
+      - 🇯🇵 日本节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇬🇧 英国节点
+      - 🔧 手动切换
+      - DIRECT
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/spotify.png
+
+  - name: 📲 电报消息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🔧 手动切换
+      - DIRECT
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
+
+  - name: 🔍 谷歌服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇬🇧 英国节点
+      - 🔧 手动切换
+      - DIRECT
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png
+
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇬🇧 英国节点
+      - 🔧 手动切换
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png
+
+  - name: 🤖 OpenAI
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇬🇧 英国节点
+      - 🔧 手动切换
+      - DIRECT
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/openai.png
+
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇬🇧 英国节点
+      - 🔧 手动切换
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/apple.png
+
+  - name: 📱 Instagram
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇬🇧 英国节点
+      - 🔧 手动切换
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Instagram.png
+
+  - name: 🐦 Twitter
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇬🇧 英国节点
+      - 🔧 手动切换
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
+
+  - name: 💬 微信
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/WeChat.png
+
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇹🇼 台湾节点
+      - 🇺🇸 美国节点
+      - 🇰🇷 韩国节点
+      - 🇬🇧 英国节点
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/betahub.png
+
+  # 自动选择组
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    use:
+      - fastfly
+    filter: ^((?!套餐|到期|余额|剩余|流量|官网).)*$
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
+
+  # 手动选择组
+  - name: 🔧 手动切换
+    type: select
+    use:
+      - fastfly
+    filter: ^((?!套餐|到期|余额|剩余|流量|官网).)*$
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Available.png
+
+  # 地区节点组 - 直接自动选择（与foreverchen9.yaml一致）
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: 港|🇭🇰|香港|HK|Hong
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: 日|🇯🇵|日本|JP|Japan
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+
+  - name: 🇺🇸 美国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: 美|🇺🇸|美国|US|States|American
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+
+  - name: 🇹🇼 台湾节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: 台|🇨🇳|台湾|TW|Tai
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
+
+  - name: 🇸🇬 狮城节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: 坡|🇸🇬|新加坡|狮城|SG|Singapore
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+
+  - name: 🇬🇧 英国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: 🇬🇧|英国|英|英格兰|UK|United Kingdom
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_Kingdom.png
+
+  - name: 🇰🇷 韩国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: 韩|🇰🇷|韩国|KR|KOR|Korea
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
+
+  - name: 🌍 其他节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: ^((?!套餐|到期|余额|剩余|流量|官网|🇭🇰|港|HK|Hong|🇹🇼|台|TW|Tai|🇯🇵|日本|JP|Japan|🇸🇬|坡|狮城|SG|Singapore|🇰🇷|韩|KR|KOR|Korea|🇺🇸|美|US|States|American|🇬🇧|英国|英|英格兰|UK|United Kingdom).)*$
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Turkey.png
+
+# 远程规则集配置 - 完整支持
+rule-providers:
+  # 自定义银行规则集
+  foreverchen9_rules:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_rules.yaml
+    path: ./ruleset/foreverchen9_rules.yaml
+
+  # Apple服务
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+    path: ./ruleset/Apple.yaml
+    interval: 86400
+
+  # 中国域名
+  China:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml
+    path: ./ruleset/ChinaDomain.yaml
+    interval: 86400
+
+  # Netflix
+  Netflix:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml
+    path: ./ruleset/Netflix.yaml
+    interval: 86400
+
+  # Microsoft
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    path: ./ruleset/Microsoft.yaml
+    interval: 86400
+
+  # Telegram
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+
+  # OpenAI
+  OpenAI:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
+    path: ./ruleset/OpenAI.yaml
+    interval: 86400
+
+  # YouTube
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+    path: ./ruleset/YouTube.yaml
+    interval: 86400
+
+  # Bilibili
+  BiliBili:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml
+    path: ./ruleset/BiliBili.yaml
+    interval: 86400
+
+  # Instagram
+  Instagram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml
+    path: ./ruleset/Instagram.yaml
+    interval: 86400
+
+  # Twitter
+  Twitter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml
+    path: ./ruleset/Twitter.yaml
+    interval: 86400
+
+  # Spotify
+  Spotify:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
+    path: ./ruleset/Spotify.yaml
+    interval: 86400
+
+  # WeChat
+  WeChat:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml
+    path: ./ruleset/WeChat.yaml
+    interval: 86400
+
+  # Google服务
+  Google:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+    path: ./ruleset/Google.yaml
+    interval: 86400
+
+  # 代理规则
+  Proxy:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy.yaml
+    path: ./ruleset/Proxy.yaml
+    interval: 86400
+
+  # 其他必要的规则集
+  ChinaIp:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml
+    path: ./ruleset/ChinaIp.yaml
+    interval: 86400
+
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GoogleFCM/GoogleFCM.yaml
+    path: ./ruleset/GoogleFCM.yaml
+    interval: 86400
+
+  Netflix_IP:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix_IP.yaml
+    path: ./ruleset/Netflix_IP.yaml
+    interval: 86400
+
+  OneDrive:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml
+    path: ./ruleset/OneDrive.yaml
+    interval: 86400
+
+  ChinaMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaMedia.yaml
+    path: ./ruleset/ChinaMedia.yaml
+    interval: 86400
+
+  GlobalMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
+    path: ./ruleset/Streaming.yaml
+    interval: 86400
+
+  Streaming:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Domain.yaml
+    path: ./ruleset/Streaming.yaml
+    interval: 86400
+
+  Proxy_Domain:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Domain.yaml
+    path: ./ruleset/Proxy_Domain.yaml
+    interval: 86400
+
+  Threads:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Threads/Threads.yaml
+    path: ./ruleset/Threads.yaml
+    interval: 86400
+
+  Speedtest:
+    type: http
+    behavior: classical
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml
+    path: ./ruleset/Speedtest.yaml
+    interval: 86400
+
+  NetEaseMusic:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml
+    path: ./ruleset/NetEaseMusic.yaml
+    interval: 86400
+
+  1688:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Alibaba/Alibaba_Classical.yaml
+    path: ./ruleset/1688.yaml
+
+  jd:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/JingDong/JingDong.yaml
+    path: ./ruleset/jd.yaml
+
+  douyin:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/DouYin/DouYin.yaml
+    path: ./ruleset/douyin.yaml
+
+# 规则配置 - 全部使用RULE-SET
+rules:
+  - RULE-SET,foreverchen9_rules,DIRECT
+  - RULE-SET,douyin,DIRECT
+  - RULE-SET,Spotify,🎵 Spotify音乐
+  - RULE-SET,1688,DIRECT
+  - RULE-SET,jd,DIRECT
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,China,DIRECT
+  - RULE-SET,GoogleFCM,🔍 谷歌服务
+  - RULE-SET,Netflix,🎬 奈飞视频
+  - RULE-SET,Netflix_IP,🎬 奈飞视频,no-resolve
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,OneDrive,Ⓜ️ 微软服务
+  - RULE-SET,WeChat,💬 微信
+  - RULE-SET,BiliBili,📺 哔哩哔哩
+  - RULE-SET,Telegram,📲 电报消息
+  - RULE-SET,OpenAI,🤖 OpenAI
+  - RULE-SET,YouTube,📹 油管视频
+  - RULE-SET,ChinaMedia,📺 哔哩哔哩
+  - RULE-SET,Streaming,🚀 节点选择
+  - RULE-SET,GlobalMedia,🚀 节点选择
+  - RULE-SET,Proxy,🚀 节点选择
+  - RULE-SET,Proxy_Domain,🚀 节点选择
+  - RULE-SET,Instagram,📱 Instagram
+  - RULE-SET,Threads,📱 Instagram
+  - RULE-SET,Speedtest,🚀 节点选择
+  - RULE-SET,NetEaseMusic,📺 哔哩哔哩
+  - RULE-SET,Twitter,🐦 Twitter
+  - GEOIP,CN,DIRECT
+  - MATCH,🐟 漏网之鱼
+
+# 脚本配置
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443

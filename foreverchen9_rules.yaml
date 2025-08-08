@@ -1,0 +1,62 @@
+# 自定义代理规则集
+# 此文件可推送到GitHub并被其他配置文件引用
+# 格式：Clash规则集标准格式
+
+payload:
+  
+  # 香港理慧银行 livi bank
+  - DOMAIN-SUFFIX,livi.com.hk
+  - DOMAIN-SUFFIX,livi.bank
+  - DOMAIN-SUFFIX,livibank.com
+  - DOMAIN-KEYWORD,livibank
+  - DOMAIN-KEYWORD,livi
+  
+  # WeLab Bank
+  - DOMAIN-SUFFIX,welab.bank
+  - DOMAIN-SUFFIX,welab.co
+  - DOMAIN-SUFFIX,welabbank.com
+  - DOMAIN-KEYWORD,welabbank
+  - DOMAIN-KEYWORD,welab
+  
+  # ZA Bank 众安银行
+  - DOMAIN-SUFFIX,za.group
+  - DOMAIN-SUFFIX,zabank.com
+  - DOMAIN-SUFFIX,za.bank
+  - DOMAIN-KEYWORD,zabank
+  
+  # Airstar Bank 天星银行
+  - DOMAIN-SUFFIX,airstarbank.com
+  - DOMAIN-SUFFIX,airstar.bank
+  - DOMAIN-KEYWORD,airstarbank
+  - DOMAIN-KEYWORD,airstar
+  
+  # 中银香港 BOCHK
+  - DOMAIN-SUFFIX,bochk.com
+  - DOMAIN-SUFFIX,boc.hk
+  - DOMAIN-SUFFIX,bochk.hk
+  - DOMAIN-KEYWORD,bochk
+  
+  # 汇丰银行香港 HSBC HK
+  - DOMAIN-SUFFIX,hsbc.com.hk
+  - DOMAIN-SUFFIX,hsbc.hk
+  - DOMAIN-SUFFIX,hsbchk.com
+  - DOMAIN-KEYWORD,hsbc
+  
+  # 兴业银行
+  - DOMAIN-SUFFIX,cib.com.cn
+  - DOMAIN-SUFFIX,cib.cn
+  - DOMAIN-SUFFIX,cib.com
+  - DOMAIN-KEYWORD,cib
+  
+  # 新加坡华侨银行 OCBC
+  - DOMAIN-SUFFIX,ocbc.com
+  - DOMAIN-SUFFIX,ocbc.com.sg
+  - DOMAIN-SUFFIX,ocbc.sg
+  - DOMAIN-KEYWORD,ocbc
+  
+  # iFast银行
+  - DOMAIN-SUFFIX,ifast.com
+  - DOMAIN-SUFFIX,ifastgb.com
+  - DOMAIN-SUFFIX,ifast.com.sg
+  - DOMAIN-SUFFIX,ifastbank.com
+  - DOMAIN-KEYWORD,ifast
