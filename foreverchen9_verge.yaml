@@ -67,7 +67,13 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
-      - 🌍 其他节点
+      - 🇻🇳 越南节点
+      - 🇦🇺 澳大利亚节点
+      - 🇹🇷 土耳其节点
+      - 🇮🇳 印度节点
+      - 🇲🇾 马来西亚节点
+      - 🇩🇪 德国节点
+      - � 其他节点
       - 🔧 手动切换
       - DIRECT
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/$tash.png
@@ -186,6 +192,12 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
+      - 🇻🇳 越南节点
+      - 🇦🇺 澳大利亚节点
+      - 🇹🇷 土耳其节点
+      - 🇮🇳 印度节点
+      - 🇲🇾 马来西亚节点
+      - 🇩🇪 德国节点
       - 🔧 手动切换
       - DIRECT
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/openai.png
@@ -260,6 +272,12 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
+      - 🇻🇳 越南节点
+      - 🇦🇺 澳大利亚节点
+      - 🇹🇷 土耳其节点
+      - 🇮🇳 印度节点
+      - 🇲🇾 马来西亚节点
+      - 🇩🇪 德国节点
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/betahub.png
 
   # 自动选择组
@@ -359,7 +377,7 @@ proxy-groups:
     filter: 韩|🇰🇷|韩国|KR|KOR|Korea
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
 
-  - name: 🌍 其他节点
+  - name: �🇳 越南节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -367,7 +385,73 @@ proxy-groups:
     proxies: []
     use:
       - fastfly
-    filter: ^((?!套餐|到期|余额|剩余|流量|官网|🇭🇰|港|HK|Hong|🇹🇼|台|TW|Tai|🇯🇵|日本|JP|Japan|🇸🇬|坡|狮城|SG|Singapore|🇰🇷|韩|KR|KOR|Korea|🇺🇸|美|US|States|American|🇬🇧|英国|英|英格兰|UK|United Kingdom).)*$
+    filter: 越|🇻🇳|越南|VN|Vietnam
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Vietnam.png
+
+  - name: 🇦🇺 澳大利亚节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: 澳|🇦🇺|澳大利亚|AU|Australia
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Australia.png
+
+  - name: 🇹🇷 土耳其节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: 土|🇹🇷|土耳其|TR|Turkey
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Turkey.png
+
+  - name: 🇮🇳 印度节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: 印|🇮🇳|印度|IN|India
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/India.png
+
+  - name: 🇲🇾 马来西亚节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: 马|🇲🇾|马来|MY|Malaysia
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Malaysia.png
+
+  - name: 🇩🇪 德国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: 德|🇩🇪|德国|DE|Germany
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Germany.png
+
+  - name:  其他节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 10
+    proxies: []
+    use:
+      - fastfly
+    filter: ^((?!套餐|到期|余额|剩余|流量|官网|🇭🇰|港|HK|Hong|🇹🇼|台|TW|Tai|🇯🇵|日本|JP|Japan|🇸🇬|坡|狮城|SG|Singapore|🇰🇷|韩|KR|KOR|Korea|🇺🇸|美|US|States|American|🇬🇧|英国|英|英格兰|UK|United Kingdom|🇻🇳|越|VN|Vietnam|🇦🇺|澳|AU|Australia|🇹🇷|土|TR|Turkey|🇮🇳|印|IN|India|🇲🇾|马|MY|Malaysia|🇩🇪|德|DE|Germany).)*$
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Turkey.png
 
 # 远程规则集配置 - 完整支持
