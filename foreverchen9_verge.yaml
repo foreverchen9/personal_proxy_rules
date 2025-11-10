@@ -25,34 +25,15 @@ experimental:
 
 # DNS配置
 dns:
-  enable: true
-  ipv6: false
-  default-nameserver:
-    - 223.6.6.6
-    - 223.5.5.5
-    - 8.8.8.8
-    - 1.1.1.1
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-    - '*.lan'
-    - localhost.ptlogin2.qq.com
-    - +.srv.nintendo.net
-    - +.stun.playstation.net
-    - +.msftconnecttest.com
-    - +.msftncsi.com
-    - +.xboxlive.com
-    - msftconnecttest.com
-    - xbox.*.microsoft.com
-    - '*.battlenet.com.cn'
-    - '*.battlenet.com'
-    - '*.blzstatic.cn'
-    - '*.battle.net'
-  nameserver:
-    - 223.6.6.6
-    - 223.5.5.5
-    - 8.8.8.8
-    - 1.1.1.1
+    enable: true
+    ipv6: false
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853', 223.5.5.5]
+    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 
 # 代理节点
 proxies: []
