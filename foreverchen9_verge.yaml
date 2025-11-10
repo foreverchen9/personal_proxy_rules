@@ -65,7 +65,7 @@ proxy-providers:
     type: http
     interval: 86400
     url: https://example.invalid/replace-with-your-private-subscription-url
-    path: ./providers/fastfly.yaml
+    # path: ./providers/fastfly.yaml
     benchmark-url: http://cp.cloudflare.com/generate_204
     health-check:
       enable: true
