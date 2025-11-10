@@ -377,7 +377,7 @@ proxy-groups:
     filter: 韩|🇰🇷|韩国|KR|KOR|Korea
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
 
-  - name: �🇳 越南节点
+  - name: 🇻🇳 越南节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
