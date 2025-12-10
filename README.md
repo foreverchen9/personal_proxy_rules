@@ -112,6 +112,7 @@ git push origin main
 - **Clash for Windows**：完整功能支持
 - **Clash for Android**：完整功能支持
 - **Stash (iOS)**：优化了iOS设备的使用体验
+- **Loon (iOS/macOS)**：提供专用 Loon 配置
 - **OpenClash (OpenWrt)**：路由器端完整支持
 
 ### Stash专用配置
@@ -129,9 +130,26 @@ https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/forever
      fastfly:
        url: https://example.invalid/replace-with-your-private-subscription-url
    ```
+4. 或直接使用仓库内模板：`overrideProxy_stash.stoverride`（复制到本地并改成你的真实订阅地址，再在 Stash 中导入为 Override）。
+5. 保存后刷新订阅，节点与“订阅流量信息”将从你的真实订阅地址获取。
 
-或直接使用仓库内模板文件：`override.stash.example.stoverride`（复制为本地 `override.stash.stoverride`，填入你的真实地址后在 Stash 中导入）。
-4. 保存后刷新订阅，节点与“订阅流量信息”将从你的真实订阅地址获取。
+### Loon 专用配置
+用于 Loon 的订阅链接：
+```
+https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_loon.conf
+```
+
+使用步骤（参考上方 Stash 流程）：
+1. 在 Loon → 配置 → 订阅，添加以上链接获取基础规则与分流。
+2. 订阅后，打开本地配置，把 `[Remote Proxy]` 中的 `fastfly` 链接替换为你的真实订阅地址（仅本地生效，不会回传仓库）。
+3. 保存并刷新节点，测试延迟即可生效。
+
+可选：若不想直接暴露真实订阅，可自托管（如 Vercel/Netlify/Cloudflare Pages/Nginx）一份私密 URL，再在第2步填入该私密地址。
+
+#### Loon 本地覆写模板
+如果希望与主配置分离真实订阅，可使用仓库内的覆写模板：
+- 文件：`overrideProxy_loon.conf`
+- 用法：复制到本地（不要提交），替换其中的占位符 URL，然后在 Loon 订阅页面为 `foreverchen9_loon.conf` 添加/关联该覆写文件，刷新后生效。
 
 ### Clash Verge 专用配置
 用于 Clash Verge 的订阅链接：
