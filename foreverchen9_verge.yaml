@@ -60,6 +60,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - 🇺🇸家宽
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇸🇬 狮城节点
@@ -76,6 +77,7 @@ proxy-groups:
   - name: 📹 油管视频
     type: select
     proxies:
+      - 🇺🇸家宽
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
@@ -145,6 +147,7 @@ proxy-groups:
   - name: 🔍 谷歌服务
     type: select
     proxies:
+      - 🇺🇸家宽
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
@@ -177,6 +180,7 @@ proxy-groups:
   - name: 🤖 OpenAI
     type: select
     proxies:
+      - 🇺🇸家宽
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
@@ -501,25 +505,11 @@ rule-providers:
     path: ./ruleset/ChinaIp.yaml
     interval: 86400
 
-  GoogleFCM:
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GoogleFCM/GoogleFCM.yaml
-    path: ./ruleset/GoogleFCM.yaml
-    interval: 86400
-
   Netflix_IP:
     type: http
     behavior: ipcidr
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix_IP.yaml
     path: ./ruleset/Netflix_IP.yaml
-    interval: 86400
-
-  OneDrive:
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml
-    path: ./ruleset/OneDrive.yaml
     interval: 86400
 
   ChinaMedia:
@@ -608,7 +598,6 @@ rules:
   - RULE-SET,Netflix,🎬 奈飞视频
   - RULE-SET,Netflix_IP,🎬 奈飞视频,no-resolve
   - RULE-SET,Microsoft,Ⓜ️ 微软服务
-  - RULE-SET,OneDrive,Ⓜ️ 微软服务
   - RULE-SET,WeChat,💬 微信
   - RULE-SET,BiliBili,📺 哔哩哔哩
   - RULE-SET,Telegram,📲 电报消息
