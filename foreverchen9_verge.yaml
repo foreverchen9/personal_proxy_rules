@@ -36,7 +36,9 @@ dns:
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 
 # 代理节点
-proxies: []
+proxies:
+  - name: "🇺🇸家宽"
+
 
 # 代理提供商配置
 proxy-providers:
@@ -60,6 +62,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - 🇺🇸家宽
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇸🇬 狮城节点
@@ -68,7 +71,6 @@ proxy-groups:
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
       - 🌍 其他节点
-      - 🔧 手动切换
       - DIRECT
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/$tash.png
 
@@ -76,6 +78,7 @@ proxy-groups:
   - name: 📹 油管视频
     type: select
     proxies:
+      - 🇺🇸家宽
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
@@ -85,7 +88,6 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
-      - 🔧 手动切换
       - DIRECT
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png
 
@@ -101,7 +103,6 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
-      - 🔧 手动切换
       - DIRECT
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png
 
@@ -123,7 +124,6 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
-      - 🔧 手动切换
       - DIRECT
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/spotify.png
 
@@ -138,13 +138,13 @@ proxy-groups:
       - 🇹🇼 台湾节点
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
-      - 🔧 手动切换
       - DIRECT
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
 
   - name: 🔍 谷歌服务
     type: select
     proxies:
+      - 🇺🇸家宽
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
@@ -154,7 +154,6 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
-      - 🔧 手动切换
       - DIRECT
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png
 
@@ -171,12 +170,12 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
-      - 🔧 手动切换
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png
 
   - name: 🤖 OpenAI
     type: select
     proxies:
+      - 🇺🇸家宽
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
@@ -186,7 +185,6 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
-      - 🔧 手动切换
       - DIRECT
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/openai.png
 
@@ -203,7 +201,6 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
-      - 🔧 手动切换
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/apple.png
 
   - name: 📱 Instagram
@@ -218,7 +215,6 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
-      - 🔧 手动切换
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Instagram.png
 
   - name: 🐦 Twitter
@@ -233,7 +229,6 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
-      - 🔧 手动切换
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
 
   - name: 💬 微信
