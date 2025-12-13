@@ -60,7 +60,6 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🇺🇸家宽
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇸🇬 狮城节点
@@ -77,7 +76,6 @@ proxy-groups:
   - name: 📹 油管视频
     type: select
     proxies:
-      - 🇺🇸家宽
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
@@ -147,7 +145,6 @@ proxy-groups:
   - name: 🔍 谷歌服务
     type: select
     proxies:
-      - 🇺🇸家宽
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
@@ -180,7 +177,6 @@ proxy-groups:
   - name: 🤖 OpenAI
     type: select
     proxies:
-      - 🇺🇸家宽
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
