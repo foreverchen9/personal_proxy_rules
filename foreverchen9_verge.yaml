@@ -590,7 +590,6 @@ rules:
   - RULE-SET,jd,DIRECT
   - RULE-SET,Apple,🍎 苹果服务
   - RULE-SET,China,DIRECT
-  - RULE-SET,GoogleFCM,🔍 谷歌服务
   - RULE-SET,Netflix,🎬 奈飞视频
   - RULE-SET,Netflix_IP,🎬 奈飞视频,no-resolve
   - RULE-SET,Microsoft,Ⓜ️ 微软服务
