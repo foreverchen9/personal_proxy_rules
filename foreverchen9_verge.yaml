@@ -36,9 +36,7 @@ dns:
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 
 # 代理节点
-proxies:
-  - name: "🇺🇸家宽"
-
+proxies: []
 
 # 代理提供商配置
 proxy-providers:
@@ -62,7 +60,6 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🇺🇸家宽
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇸🇬 狮城节点
@@ -78,7 +75,6 @@ proxy-groups:
   - name: 📹 油管视频
     type: select
     proxies:
-      - 🇺🇸家宽
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
@@ -144,7 +140,6 @@ proxy-groups:
   - name: 🔍 谷歌服务
     type: select
     proxies:
-      - 🇺🇸家宽
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
@@ -175,7 +170,6 @@ proxy-groups:
   - name: 🤖 OpenAI
     type: select
     proxies:
-      - 🇺🇸家宽
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
