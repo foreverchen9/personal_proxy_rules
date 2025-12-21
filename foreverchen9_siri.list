@@ -1,0 +1,22 @@
+# ===============================
+# Apple Intelligence / Siri (AI)
+# ===============================
+
+# Siri 核心语义与解析
+DOMAIN,guzzoni.apple.com
+DOMAIN,assistant.apple.com
+DOMAIN,assistant.apple.com.cn
+DOMAIN,api.smoot.apple.com
+
+# Apple Intelligence 云端能力
+DOMAIN,ai.apple.com
+
+# AI 请求调度 / 质量控制
+DOMAIN,analytics.apple.com
+DOMAIN,metrics.apple.com
+
+# Siri 上下文 & AI 会话依赖
+DOMAIN-SUFFIX,icloud-content.com
+
+# Apple ID（AI 鉴权必经）
+DOMAIN,appleid.apple.com
