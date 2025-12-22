@@ -395,7 +395,7 @@ rule-providers:
   Apple Intelligence:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/fforeverchen9_apple_intelligence.yaml
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_apple_intelligence.yaml
     path: ./ruleset/foreverchen9_apple_intelligence.yaml
     interval: 86400
 
@@ -599,6 +599,7 @@ rules:
   - RULE-SET,1688,DIRECT
   - RULE-SET,jd,DIRECT
   - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Apple Intelligence,🍏 Apple Intelligence
   - RULE-SET,China,DIRECT
   - RULE-SET,Netflix,🎬 奈飞视频
   - RULE-SET,Netflix_IP,🎬 奈飞视频,no-resolve
