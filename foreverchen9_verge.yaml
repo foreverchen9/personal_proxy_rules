@@ -197,7 +197,7 @@ proxy-groups:
       - 🇬🇧 英国节点
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/apple.png
 
-    - name: 🍏 Apple Intelligence
+  - name: 🍏 苹果智能
     type: select
     proxies:
       - 🇯🇵 日本节点
@@ -392,7 +392,7 @@ rule-providers:
     path: ./ruleset/Apple.yaml
     interval: 86400
 
-  Apple Intelligence:
+  AppleIntelligence:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_apple_intelligence.yaml
@@ -599,7 +599,7 @@ rules:
   - RULE-SET,1688,DIRECT
   - RULE-SET,jd,DIRECT
   - RULE-SET,Apple,🍎 苹果服务
-  - RULE-SET,Apple Intelligence,🍏 Apple Intelligence
+  - RULE-SET,AppleIntelligence,🍏 苹果智能
   - RULE-SET,China,DIRECT
   - RULE-SET,Netflix,🎬 奈飞视频
   - RULE-SET,Netflix_IP,🎬 奈飞视频,no-resolve
