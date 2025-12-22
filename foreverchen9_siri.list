@@ -1,42 +1,6 @@
-# ===============================
-# Apple Intelligence / Siri (AI)
-# 仅代理 AI 相关，不影响普通 iCloud 服务
-# ===============================
-
-# Siri 核心语义与解析
+DOMAIN,apple-relay.apple.com
+DOMAIN,cp4.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN,guzzoni.apple.com
-DOMAIN,assistant.apple.com
-DOMAIN,api.smoot.apple.com
-DOMAIN,smoot.apple.com
-DOMAIN,dictation.apple.com
-
-# Apple Intelligence 云端能力
-DOMAIN,ai.apple.com
-DOMAIN-SUFFIX,apple-ai.com
-DOMAIN-SUFFIX,apple-intelligence.com
-
-# Apple Private Cloud Compute (PCC) - AI 专用
-DOMAIN,cp4.apple.com
-DOMAIN,cp5.apple.com
-
-# Siri AI 会话
-DOMAIN-SUFFIX,siri.apple.com
-
-# ===============================
-# OpenAI / ChatGPT (Apple Intelligence 调用)
-# ===============================
-
-# ChatGPT 核心 API
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,chatgpt.com
-
-# OpenAI 静态资源 / CDN
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-
-# OpenAI 实时/流式推理
-DOMAIN,events.statsigapi.net
-DOMAIN,featuregates.org
-DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,intercom.io
