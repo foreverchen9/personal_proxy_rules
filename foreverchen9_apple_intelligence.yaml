@@ -1,0 +1,16 @@
+# Apple Intelligence / Siri 代理规则
+# 仅代理 AI 相关，不影响普通 iCloud 服务
+
+payload:
+  # Apple Private Relay (AI 请求中继)
+  - DOMAIN,apple-relay.apple.com
+  - DOMAIN,apple-relay.cloudflare.com
+  - DOMAIN,apple-relay.fastly-edge.com
+  - DOMAIN,cp4.cloudflare.com
+
+  # Siri 核心语义解析
+  - DOMAIN,guzzoni.apple.com
+  - DOMAIN-SUFFIX,smoot.apple.com
+
+  # 地图/位置 (Siri 依赖)
+  - DOMAIN,gspe1-ssl.ls.apple.com
