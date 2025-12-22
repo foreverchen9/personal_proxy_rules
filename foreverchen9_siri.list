@@ -17,6 +17,7 @@ DOMAIN,metrics.apple.com
 
 # Siri 上下文 & AI 会话依赖
 DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,siri.apple.com
 
 # Apple ID（AI 鉴权必经）
 DOMAIN,appleid.apple.com
