@@ -36,7 +36,9 @@ dns:
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 
 # 代理节点
-proxies: []
+proxies: 
+  -
+    name: 🇺🇸家宽
 
 # 代理提供商配置
 proxy-providers:
@@ -59,6 +61,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
+      - 🇺🇸家宽
       - ♻️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
