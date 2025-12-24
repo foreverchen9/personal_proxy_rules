@@ -623,6 +623,7 @@ rules:
   - RULE-SET,NetEaseMusic,📺 哔哩哔哩
   - RULE-SET,Twitter,🐦 Twitter
   - GEOIP,CN,DIRECT
+  - PROCESS-NAME,Antigravity,🇺🇸 美国节点
   - MATCH,🐟 漏网之鱼
 
 # 脚本配置
