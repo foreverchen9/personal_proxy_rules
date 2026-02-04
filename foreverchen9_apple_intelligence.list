@@ -1,31 +1,15 @@
 # Apple Intelligence / Siri 代理规则
 # 仅代理 AI 相关，不影响普通 iCloud 服务
-# 参考: https://support.apple.com/en-us/101555
 
-# Private Cloud Compute (Apple Intelligence 核心)
+# Apple Private Relay (AI 请求中继)
 DOMAIN,apple-relay.apple.com
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,cp4.cloudflare.com
 
-# Siri 和 Dictation
+# Siri 核心语义解析
 DOMAIN,guzzoni.apple.com
-
-# 搜索服务 (Siri, Spotlight, Lookup, Safari, News, Messages, Music)
 DOMAIN-SUFFIX,smoot.apple.com
 
-# iCloud Private Relay (用于部分 AI 请求)
-DOMAIN,mask.icloud.com
-DOMAIN,mask-h2.icloud.com
-DOMAIN,mask-api.icloud.com
-
-# Apple Account 认证 (AI 服务依赖)
-DOMAIN,gsa.apple.com
-DOMAIN,idmsa.apple.com
-
-# 地图/位置服务 (Siri 依赖)
+# 地图/位置 (Siri 依赖)
 DOMAIN,gspe1-ssl.ls.apple.com
-
-# CloudKit (AI 模型更新相关)
-DOMAIN,gateway.icloud.com
-DOMAIN-SUFFIX,apple-cloudkit.com
