@@ -61,7 +61,6 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 🇺🇸家宽
       - ♻️ 自动选择
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
@@ -72,6 +71,7 @@ proxy-groups:
       - 🇬🇧 英国节点
       - 🌍 其他节点
       - DIRECT
+      - 🇺🇸家宽
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/$tash.png
 
   # 应用特定代理组
