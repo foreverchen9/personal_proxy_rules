@@ -185,10 +185,9 @@ proxy-groups:
       - DIRECT
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/openai.png
 
-  - name: 🍎 苹果服务
+  - name: 💎 Gemini
     type: select
     proxies:
-      - DIRECT
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
@@ -198,15 +197,17 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - 🇬🇧 英国节点
-    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/apple.png
+      - DIRECT
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png
 
-  - name: 🍏 苹果智能
+  - name: 🍎 苹果服务
     type: select
     proxies:
-      - 🇯🇵 日本节点
+      - DIRECT
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
       - 🇸🇬 狮城节点
       - 🇹🇼 台湾节点
       - 🇺🇸 美国节点
@@ -395,13 +396,6 @@ rule-providers:
     path: ./ruleset/Apple.yaml
     interval: 86400
 
-  AppleIntelligence:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_apple_intelligence.yaml
-    path: ./ruleset/foreverchen9_apple_intelligence.yaml
-    interval: 86400
-
   # 中国域名
   China:
     type: http
@@ -488,6 +482,14 @@ rule-providers:
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml
     path: ./ruleset/WeChat.yaml
+    interval: 86400
+
+  # Gemini
+  Gemini:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml
+    path: ./ruleset/Gemini.yaml
     interval: 86400
 
   # Google服务
@@ -602,7 +604,6 @@ rules:
   - RULE-SET,1688,DIRECT
   - RULE-SET,jd,DIRECT
   - RULE-SET,Apple,🍎 苹果服务
-  - RULE-SET,AppleIntelligence,🍏 苹果智能
   - RULE-SET,China,DIRECT
   - RULE-SET,Netflix,🎬 奈飞视频
   - RULE-SET,Netflix_IP,🎬 奈飞视频,no-resolve
@@ -611,6 +612,7 @@ rules:
   - RULE-SET,BiliBili,📺 哔哩哔哩
   - RULE-SET,Telegram,📲 电报消息
   - RULE-SET,OpenAI,🤖 OpenAI
+  - RULE-SET,Gemini,💎 Gemini
   - RULE-SET,YouTube,📹 油管视频
   - RULE-SET,ChinaMedia,📺 哔哩哔哩
   - RULE-SET,Streaming,🚀 节点选择
