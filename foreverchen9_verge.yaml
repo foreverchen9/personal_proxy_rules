@@ -598,6 +598,10 @@ rule-providers:
 
 # 规则配置 - 全部使用RULE-SET
 rules:
+  - DOMAIN-SUFFIX,zhuanzhuan.com,DIRECT
+  - DOMAIN-SUFFIX,zhuanstatic.com,DIRECT
+  - DOMAIN-SUFFIX,zhuanspirit.com,DIRECT
+  - DOMAIN-SUFFIX,zhuaninc.com,DIRECT
   - RULE-SET,foreverchen9_rules,DIRECT
   - RULE-SET,douyin,DIRECT
   - RULE-SET,Spotify,🎵 Spotify音乐
