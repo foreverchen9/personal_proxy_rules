@@ -572,13 +572,13 @@ rule-providers:
     path: ./ruleset/NetEaseMusic.yaml
     interval: 86400
 
-  1688:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Alibaba/Alibaba_Classical.yaml
-    path: ./ruleset/1688.yaml
+  # 1688:
+  #   type: http
+  #   behavior: classical
+  #   format: yaml
+  #   interval: 86400
+  #   url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Alibaba/Alibaba_Classical.yaml
+  #   path: ./ruleset/1688.yaml
 
   jd:
     type: http
@@ -601,7 +601,7 @@ rules:
   - RULE-SET,foreverchen9_rules,DIRECT
   - RULE-SET,douyin,DIRECT
   - RULE-SET,Spotify,🎵 Spotify音乐
-  - RULE-SET,1688,DIRECT
+  # - RULE-SET,1688,DIRECT
   - RULE-SET,jd,DIRECT
   - RULE-SET,Apple,🍎 苹果服务
   - RULE-SET,China,DIRECT
