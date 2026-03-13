@@ -598,6 +598,7 @@ rule-providers:
 
 # 规则配置 - 全部使用RULE-SET
 rules:
+  - DOMAIN-SUFFIX,agentrouter.org,DIRECT
   - RULE-SET,foreverchen9_rules,DIRECT
   - RULE-SET,douyin,DIRECT
   - RULE-SET,Spotify,🎵 Spotify音乐
