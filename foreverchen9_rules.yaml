@@ -60,3 +60,9 @@ payload:
   - DOMAIN-SUFFIX,ifast.com.sg
   - DOMAIN-SUFFIX,ifastbank.com
   - DOMAIN-KEYWORD,ifast
+
+  # zhuanzhuan
+  - DOMAIN-SUFFIX,zhuanzhuan.com
+  - DOMAIN-SUFFIX,zhuanstatic.com
+  - DOMAIN-SUFFIX,zhuanspirit.com
+  - DOMAIN-SUFFIX,zhuaninc.com

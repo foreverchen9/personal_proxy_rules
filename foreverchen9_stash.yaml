@@ -472,6 +472,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml
     path: ./ruleset/Twitter.yaml
     interval: 86400
+  OKX:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OKX/OKX.yaml
+    path: ./ruleset/OKX.yaml
+    interval: 86400
   YouTube:
     type: http
     behavior: classical
@@ -566,6 +572,13 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/DouYin/DouYin.yaml
     path: ./ruleset/douyin.yaml
+  github:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml
+    path: ./ruleset/github.yaml
   blockAdvertising:
     type: http
     behavior: classical
@@ -584,12 +597,13 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    interval: 86400
-    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_rules.yaml
-    path: ./ruleset/foreverchen9_rules.yaml
+    interval: 3600
+    url: https://cdn.jsdelivr.net/gh/foreverchen9/personal_proxy_rules@main/foreverchen9_rules.yaml
+    path: ./ruleset/foreverchen9_rules_v2.yaml
 rules:
   - RULE-SET,foreverchen9_rules,DIRECT
   - RULE-SET,douyin,DIRECT
+  - RULE-SET,github,节点选择
   - RULE-SET,Spotify,Spotify
   - RULE-SET,1688,DIRECT
   - RULE-SET,jd,DIRECT # 狗东
@@ -616,6 +630,7 @@ rules:
   - RULE-SET,Speedtest,Speedtest
   - RULE-SET,NetEaseMusic,网易音乐
   - RULE-SET,Twitter,Twitter
+  - RULE-SET,OKX,狮城节点
   - GEOIP,CN,DIRECT
   - MATCH,漏网之鱼
 script:
