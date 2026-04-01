@@ -1,0 +1,9 @@
+# 转转域名规则集
+# 可单独作为 rule-provider 引用
+# 格式：Clash规则集标准格式
+
+payload:
+  - DOMAIN-SUFFIX,zhuanzhuan.com
+  - DOMAIN-SUFFIX,zhuanstatic.com
+  - DOMAIN-SUFFIX,zhuanspirit.com
+  - DOMAIN-SUFFIX,zhuaninc.com
