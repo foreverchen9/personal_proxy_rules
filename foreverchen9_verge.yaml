@@ -623,6 +623,7 @@ rule-providers:
 
 # 规则配置 - 全部使用RULE-SET
 rules:
+  - DOMAIN-SUFFIX,labuladong.online,🚀 节点选择
   - RULE-SET,foreverchen9_zhuanzhuan,DIRECT
   - RULE-SET,foreverchen9_rules,DIRECT
   - RULE-SET,douyin,DIRECT

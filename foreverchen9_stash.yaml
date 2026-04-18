@@ -608,6 +608,7 @@ rule-providers:
     url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_rules.yaml
     path: ./ruleset/foreverchen9_rules_v2.yaml
 rules:
+  - DOMAIN-SUFFIX,labuladong.online,🚀 节点选择
   - RULE-SET,foreverchen9_zhuanzhuan,DIRECT
   - RULE-SET,foreverchen9_rules,DIRECT
   - RULE-SET,douyin,DIRECT
