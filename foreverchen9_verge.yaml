@@ -379,25 +379,6 @@ proxy-groups:
 
 # 远程规则集配置 - 完整支持
 rule-providers:
-
-  # 自定义转转规则集
-  foreverchen9_zhuanzhuan:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 3600
-    url: https://cdn.jsdelivr.net/gh/foreverchen9/personal_proxy_rules@main/foreverchen9_zhuanzhuan.yaml
-    path: ./ruleset/foreverchen9_zhuanzhuan.yaml
-
-  # 自定义银行规则集
-  foreverchen9_rules:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 3600
-    url: https://cdn.jsdelivr.net/gh/foreverchen9/personal_proxy_rules@main/foreverchen9_rules.yaml
-    path: ./ruleset/foreverchen9_rules_v2.yaml
-
   # Apple服务
   Apple:
     type: http
@@ -621,6 +602,24 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml
     path: ./ruleset/github.yaml
+  
+  # 自定义转转规则集
+  foreverchen9_zhuanzhuan:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 3600
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_zhuanzhuan.yaml
+    path: ./ruleset/foreverchen9_zhuanzhuan.yaml
+
+  # 自定义银行规则集
+  foreverchen9_rules:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 3600
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_rules.yaml
+    path: ./ruleset/foreverchen9_rules_v2.yaml
 
 # 规则配置 - 全部使用RULE-SET
 rules:

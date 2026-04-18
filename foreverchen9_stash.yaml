@@ -598,14 +598,14 @@ rule-providers:
     behavior: classical
     format: yaml
     interval: 3600
-    url: https://cdn.jsdelivr.net/gh/foreverchen9/personal_proxy_rules@main/foreverchen9_zhuanzhuan.yaml
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_zhuanzhuan.yaml
     path: ./ruleset/foreverchen9_zhuanzhuan.yaml
   foreverchen9_rules:
     type: http
     behavior: classical
     format: yaml
     interval: 3600
-    url: https://cdn.jsdelivr.net/gh/foreverchen9/personal_proxy_rules@main/foreverchen9_rules.yaml
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_rules.yaml
     path: ./ruleset/foreverchen9_rules_v2.yaml
 rules:
   - RULE-SET,foreverchen9_zhuanzhuan,DIRECT
