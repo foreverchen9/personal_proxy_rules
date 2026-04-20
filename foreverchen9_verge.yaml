@@ -31,29 +31,6 @@ dns:
     enhanced-mode: fake-ip
     fake-ip-range: 198.18.0.1/16
     use-hosts: true
-    fake-ip-filter:
-    - '+.zhuaninc.com'
-    - '+.zhuanzhuan.com'
-    - '+.zhuanspirit.com'
-    - '+.zhuanstatic.com'
-    nameserver-policy:
-    '+.zhuaninc.com':
-      - 10.238.18.22
-      - 10.238.18.23
-    '+.zhuanzhuan.com':
-      - 10.238.18.22
-      - 10.238.18.23
-    '+.zhuanspirit.com':
-      - 10.238.18.22
-      - 10.238.18.23
-    '+.zhuanstatic.com':
-      - 10.238.18.22
-      - 10.238.18.23
-
-    direct-nameserver:
-    - 10.238.18.22
-    - 10.238.18.23
-    direct-nameserver-follow-policy: true
     nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query', '10.238.18.22', '10.238.18.23', '114.114.114.114']
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853', 223.5.5.5]
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
