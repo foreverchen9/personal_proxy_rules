@@ -607,10 +607,18 @@ rule-providers:
     interval: 3600
     url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_rules.yaml
     path: ./ruleset/foreverchen9_rules_v2.yaml
+  foreverchen9_apple_pay:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 3600
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_apple_pay.yaml
+    path: ./ruleset/foreverchen9_apple_pay.yaml
 rules:
   - DOMAIN-SUFFIX,labuladong.online,🚀 节点选择
   - RULE-SET,foreverchen9_zhuanzhuan,DIRECT
   - RULE-SET,foreverchen9_rules,DIRECT
+  - RULE-SET,foreverchen9_apple_pay,DIRECT
   - RULE-SET,douyin,DIRECT
   - RULE-SET,github,节点选择
   - RULE-SET,Spotify,Spotify
