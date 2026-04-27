@@ -10,7 +10,7 @@
   
 
 ### 规则集文件
-- `foreverchen9_rules.yaml` - 自定义规则集，包含银行和金融服务相关的域名规则
+- `foreverchen9_hk_bank.yaml` - 自定义规则集，包含银行和金融服务相关的域名规则
 
 ## 如何使用
 
@@ -22,16 +22,16 @@
 
 ```yaml
 rule-providers:
-  foreverchen9_rules:
+  foreverchen9_hk_bank:
     type: http
     behavior: classical
     format: yaml
     interval: 86400
-    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_rules.yaml
-    path: ./ruleset/foreverchen9_rules.yaml
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_hk_bank.yaml
+    path: ./ruleset/foreverchen9_hk_bank.yaml
 
 rules:
-  - RULE-SET,foreverchen9_rules,DIRECT
+  - RULE-SET,foreverchen9_hk_bank,DIRECT
 ```
 
 ### 3. 使用模板创建新配置
@@ -55,7 +55,7 @@ rules:
 
 ### 🏦 银行金融规则集
 
-`foreverchen9_rules.yaml` 包含以下银行和金融服务的规则：
+`foreverchen9_hk_bank.yaml` 包含以下银行和金融服务的规则：
 
 **香港银行**：
 - livi bank（理慧银行）
@@ -73,7 +73,7 @@ rules:
 - 兴业银行
 
 ### 添加新规则
-在 `foreverchen9_rules.yaml` 的 `payload` 部分添加新规则：
+在 `foreverchen9_hk_bank.yaml` 的 `payload` 部分添加新规则：
 
 ```yaml
 payload:
