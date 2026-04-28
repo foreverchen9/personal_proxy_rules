@@ -194,7 +194,6 @@ https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/forever
 - **🇹🇼 台湾节点**：自动选择延迟最低的台湾节点
 - **🇯🇵 日本节点**：自动选择延迟最低的日本节点
 - **🇺🇸 美国节点**：自动选择延迟最低的美国节点
-- **🇬🇧 英国节点**：自动选择延迟最低的英国节点
 - **🇰🇷 韩国节点**：自动选择延迟最低的韩国节点
 - **🇸🇬 狮城节点**：自动选择延迟最低的新加坡节点
 
@@ -202,7 +201,6 @@ https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/forever
 - **📲 电报消息**：Telegram专用代理组
 - **🤖 OpenAI**：OpenAI/ChatGPT专用代理组
 - **📹 油管视频**：YouTube专用代理组
-- **🎬 奈飞视频**：Netflix专用代理组
 - **📱 Instagram**：Instagram专用代理组
 - **🐦 Twitter**：Twitter专用代理组
 - **💬 WeChat**：微信专用代理组（优先直连）
