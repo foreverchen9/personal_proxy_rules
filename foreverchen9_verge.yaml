@@ -72,7 +72,7 @@ proxy-groups:
       - 🌍 其他节点
       - DIRECT
       - 🇺🇸家宽
-    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/$tash.png
+    icon: https://github.com/blackmatrix7/ios_rule_script/blob/master/icon/qure/color/Rocket.png
 
   # 应用特定代理组
   - name: 📹 油管视频
