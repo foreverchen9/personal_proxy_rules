@@ -72,7 +72,7 @@ proxy-groups:
       - 🌍 其他节点
       - DIRECT
       - 🇺🇸家宽
-    icon: https://github.com/blackmatrix7/ios_rule_script/blob/master/icon/qure/color/Rocket.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Rocket.png
 
   # 应用特定代理组
   - name: 📹 油管视频
@@ -87,7 +87,7 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - DIRECT
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/youtube.png
 
   - name: 🎵 Spotify音乐
     type: select
@@ -101,7 +101,7 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - DIRECT
-    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/spotify.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/spotify.png
 
   - name: 📲 电报消息
     type: select
@@ -115,7 +115,7 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - DIRECT
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/telegram.png
 
   - name: 🔍 谷歌服务
     type: select
@@ -129,7 +129,7 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - DIRECT
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/google.png
 
   - name: Ⓜ️ 微软服务
     type: select
@@ -143,7 +143,7 @@ proxy-groups:
       - 🇹🇼 台湾节点
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/microsoft.png
 
   - name: 🤖 OpenAI
     type: select
@@ -185,7 +185,7 @@ proxy-groups:
       - 🇹🇼 台湾节点
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
-    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/apple.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/apple.png
 
   - name: 📱 Instagram
     type: select
@@ -198,7 +198,7 @@ proxy-groups:
       - 🇹🇼 台湾节点
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Instagram.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/instagram.png
 
   - name: 🐦 Twitter
     type: select
@@ -211,7 +211,7 @@ proxy-groups:
       - 🇹🇼 台湾节点
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/twitter.png
 
   - name: 💬 微信
     type: select
@@ -222,7 +222,7 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇹🇼 台湾节点
       - 🇰🇷 韩国节点
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/WeChat.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/WeChat.png
 
   - name: 🐟 漏网之鱼
     type: select
@@ -267,7 +267,7 @@ proxy-groups:
     use:
       - fastfly
     filter: 港|🇭🇰|香港|HK|Hong
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Hong_Kong.png
 
   - name: 🇯🇵 日本节点
     type: url-test
@@ -278,7 +278,7 @@ proxy-groups:
     use:
       - fastfly
     filter: 日|🇯🇵|日本|JP|Japan
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Japan.png
 
   - name: 🇺🇸 美国节点
     type: url-test
@@ -289,7 +289,7 @@ proxy-groups:
     use:
       - fastfly
     filter: 美|🇺🇸|美国|US|States|American
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/United_States.png
 
   - name: 🇹🇼 台湾节点
     type: url-test
@@ -300,7 +300,7 @@ proxy-groups:
     use:
       - fastfly
     filter: 台|🇨🇳|台湾|TW|Tai
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Taiwan.png
 
   - name: 🇸🇬 狮城节点
     type: url-test
@@ -311,7 +311,7 @@ proxy-groups:
     use:
       - fastfly
     filter: 坡|🇸🇬|新加坡|狮城|SG|Singapore
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Singapore.png
 
   - name: 🇰🇷 韩国节点
     type: url-test
@@ -322,7 +322,7 @@ proxy-groups:
     use:
       - fastfly
     filter: 韩|🇰🇷|韩国|KR|KOR|Korea
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Korea.png
 
   - name: 🌍 其他节点
     type: url-test
@@ -333,7 +333,7 @@ proxy-groups:
     use:
       - fastfly
     filter: ^((?!套餐|到期|余额|剩余|流量|官网|🇭🇰|港|HK|Hong|🇹🇼|台|TW|Tai|🇯🇵|日本|JP|Japan|🇸🇬|坡|狮城|SG|Singapore|🇰🇷|韩|KR|KOR|Korea|🇺🇸|美|US|States|American).)*$
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Turkey.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/global.png
 
 # 远程规则集配置 - 完整支持
 rule-providers:
