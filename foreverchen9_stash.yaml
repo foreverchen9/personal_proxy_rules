@@ -88,7 +88,7 @@ proxy-groups:
       - 手动切换
       - DIRECT
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
-  - name: OpenAi
+  - name: OpenAI
     type: select
     proxies:
       - 节点选择
@@ -130,20 +130,6 @@ proxy-groups:
       - 手动切换
       - DIRECT
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png
-  - name: 奈飞视频
-    type: select
-    proxies:
-      - 节点选择
-      - 自动选择
-      - 狮城节点
-      - 香港节点
-      - 台湾节点
-      - 日本节点
-      - 韩国节点
-      - 美国节点
-      - 手动切换
-      - DIRECT
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png
   - name: Spotify
     type: select
     proxies:
@@ -158,20 +144,6 @@ proxy-groups:
       - 手动切换
       - DIRECT
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/spotify.png
-  - name: 国外媒体
-    type: select
-    proxies:
-      - 节点选择
-      - 自动选择
-      - 香港节点
-      - 台湾节点
-      - 狮城节点
-      - 日本节点
-      - 韩国节点
-      - 美国节点
-      - 手动切换
-      - DIRECT
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Diaspora.png
   - name: Instagram
     type: select
     proxies:
@@ -199,7 +171,7 @@ proxy-groups:
       - 美国节点
       - 手动切换
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
-  - name: 谷歌FCM
+  - name: 谷歌服务
     type: select
     proxies:
       - DIRECT
@@ -249,13 +221,6 @@ proxy-groups:
       - 韩国节点
       - 手动切换
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/apple.png
-  - name: 全球直连
-    type: select
-    proxies:
-      - DIRECT
-      - 节点选择
-      - 自动选择
-    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/londoneye.png
   - name: 漏网之鱼
     type: select
     proxies:
@@ -360,10 +325,16 @@ rule-providers:
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml
     path: ./ruleset/ChinaIp.yaml
     interval: 86400
+  Google:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+    path: ./ruleset/Google.yaml
+    interval: 86400
   GoogleFCM:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GoogleFCM/GoogleFCM.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM.yaml
     path: ./ruleset/GoogleFCM.yaml
     interval: 86400
   Microsoft:
@@ -429,7 +400,7 @@ rule-providers:
   Proxy:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy.yaml
     path: ./ruleset/Proxy.yaml
     interval: 86400
   Proxy_Domain:
@@ -441,43 +412,23 @@ rule-providers:
   Instagram:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Instagram/Instagram.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml
     path: ./ruleset/Instagram.yaml
-    interval: 86400
-  Lan: # 局域网
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml
-    path: ./ruleset/lan.yaml
     interval: 86400
   Spotify:
     type: http
     behavior: classical
     format: yaml
     interval: 86400
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
     path: ./ruleset/Spotify.yaml
-  github:
+  GitHub:
     type: http
     behavior: classical
     format: yaml
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml
     path: ./ruleset/github.yaml
-  blockAdvertising:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml
-    path: ./ruleset/blockAdvertising.yaml
-  zhaoshang:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/CMB/CMB.yaml
-    path: ./ruleset/zhaoshang.yaml
   foreverchen9_hk_bank:
     type: http
     behavior: classical
@@ -488,18 +439,19 @@ rule-providers:
 rules:
   - DOMAIN-SUFFIX,labuladong.online,🚀 节点选择
   - RULE-SET,foreverchen9_hk_bank,DIRECT
-  - RULE-SET,github,节点选择
+  - RULE-SET,GitHub,节点选择
   - RULE-SET,Spotify,Spotify
   - RULE-SET,Apple,苹果服务
   - RULE-SET,China,DIRECT
-  - RULE-SET,GoogleFCM,谷歌FCM
+  - RULE-SET,Google,谷歌服务
+  - RULE-SET,GoogleFCM,谷歌服务
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,WeChat,WeChat
   - RULE-SET,Telegram,电报消息
-  - RULE-SET,OpenAI,OpenAi
+  - RULE-SET,OpenAI,OpenAI
   - RULE-SET,Gemini,Gemini
   - RULE-SET,YouTube,油管视频
-  - RULE-SET,Streaming,国外媒体
+  - RULE-SET,Streaming,节点选择
   - RULE-SET,GlobalMedia,节点选择
   - RULE-SET,Proxy,节点选择
   - RULE-SET,Proxy_Domain,节点选择
