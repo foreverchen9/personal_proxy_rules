@@ -171,7 +171,7 @@ proxy-groups:
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
       - DIRECT
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png
+    icon: https://raw.githubusercontent.com/shindgewongxj/WHATSINStash/main/icon/google.png
 
   - name: 🍎 苹果服务
     type: select
@@ -236,7 +236,7 @@ proxy-groups:
       - 🇹🇼 台湾节点
       - 🇺🇸 美国节点
       - 🇰🇷 韩国节点
-    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/betahub.png
+    icon: https://raw.githubusercontent.com/shindgewongxj/WHATSINStash/main/icon/fishchips0.png
 
   # 自动选择组
   - name: ♻️ 自动选择
