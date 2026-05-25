@@ -29,6 +29,10 @@ payload:
   - DOMAIN-SUFFIX,airstar.bank
   - DOMAIN-KEYWORD,airstarbank
   - DOMAIN-KEYWORD,airstar
+
+  # EleBank 象象银行
+  - DOMAIN-SUFFIX,elebank.com
+  - DOMAIN-KEYWORD,elebank
   
   # 中银香港 BOCHK
   - DOMAIN-SUFFIX,bochk.com
