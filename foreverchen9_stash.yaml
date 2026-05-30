@@ -171,6 +171,21 @@ proxy-groups:
       - 美国节点
       - 手动切换
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/twitter.png
+  - name: 海外券商
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 美国节点
+      - 节点选择
+      - 自动选择
+      - 日本节点
+      - 台湾节点
+      - 韩国节点
+      - 其他节点
+      - 手动切换
+      - DIRECT
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/global.png
   - name: 谷歌服务
     type: select
     proxies:
@@ -436,9 +451,17 @@ rule-providers:
     interval: 3600
     url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_hk_bank.yaml
     path: ./ruleset/foreverchen9_hk_bank.yaml
+  foreverchen9_overseas_broker:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 3600
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_overseas_broker.yaml
+    path: ./ruleset/foreverchen9_overseas_broker.yaml
 rules:
   - DOMAIN-SUFFIX,labuladong.online,🚀 节点选择
   - RULE-SET,foreverchen9_hk_bank,DIRECT
+  - RULE-SET,foreverchen9_overseas_broker,海外券商
   - RULE-SET,GitHub,节点选择
   - RULE-SET,Spotify,Spotify
   - RULE-SET,Apple,苹果服务

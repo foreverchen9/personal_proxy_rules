@@ -1,0 +1,86 @@
+# 海外券商账户代理规则集
+# 用于长桥、富途牛牛 / moomoo、IBKR、盈立、嘉信、BBAE、Firstrade 等境外券商
+
+payload:
+
+  # 长桥香港 / 长桥新加坡 / Longbridge / LongPort
+  - DOMAIN-SUFFIX,longbridge.com
+  - DOMAIN-SUFFIX,longbridge.hk
+  - DOMAIN-SUFFIX,longbridge.sg
+  - DOMAIN-SUFFIX,longbridge.global
+  - DOMAIN-SUFFIX,longbridgeapp.com
+  - DOMAIN-SUFFIX,longportapp.com
+  - DOMAIN-SUFFIX,longportwhale.com
+  - DOMAIN-SUFFIX,lbkrs.com
+  - DOMAIN-SUFFIX,lbctrl.com
+  - DOMAIN-KEYWORD,longbridge
+  - DOMAIN-KEYWORD,longport
+
+  # 富途牛牛香港 / Futu / Futubull / moomoo
+  - DOMAIN-SUFFIX,futuhk.com
+  - DOMAIN-SUFFIX,futunn.com
+  - DOMAIN-SUFFIX,futubull.com
+  - DOMAIN-SUFFIX,futu.com
+  - DOMAIN-SUFFIX,futuholdings.com
+  - DOMAIN-SUFFIX,futuie.com
+  - DOMAIN-SUFFIX,fututrust.com
+  - DOMAIN-SUFFIX,moomoo.com
+  - DOMAIN-SUFFIX,moomoo.io
+  - DOMAIN-SUFFIX,moomoo.com.hk
+  - DOMAIN-KEYWORD,futunn
+  - DOMAIN-KEYWORD,futubull
+  - DOMAIN-KEYWORD,moomoo
+
+  # Interactive Brokers / IBKR
+  - DOMAIN-SUFFIX,interactivebrokers.com
+  - DOMAIN-SUFFIX,interactivebrokers.com.hk
+  - DOMAIN-SUFFIX,interactivebrokers.hk
+  - DOMAIN-SUFFIX,interactivebrokers.com.sg
+  - DOMAIN-SUFFIX,interactivebrokers.co.uk
+  - DOMAIN-SUFFIX,interactivebrokers.ie
+  - DOMAIN-SUFFIX,interactivebrokers.eu
+  - DOMAIN-SUFFIX,ibkr.com
+  - DOMAIN-SUFFIX,ibkr.com.sg
+  - DOMAIN-SUFFIX,ibkrcampus.com
+  - DOMAIN-SUFFIX,ibkrguides.com
+  - DOMAIN-SUFFIX,ibkram.com
+  - DOMAIN-SUFFIX,clientam.com
+  - DOMAIN-SUFFIX,portfolioanalyst.com
+  - DOMAIN-KEYWORD,interactivebrokers
+  - DOMAIN-KEYWORD,ibkr
+
+  # 盈立香港 / 盈立新加坡 / uSMART
+  - DOMAIN-SUFFIX,usmart.sg
+  - DOMAIN-SUFFIX,usmartsecurities.com
+  - DOMAIN-SUFFIX,global.usmartsecurities.com
+  - DOMAIN-SUFFIX,usmart-app.com
+  - DOMAIN-SUFFIX,usmartglobal.com
+  - DOMAIN-SUFFIX,usmart8.com
+  - DOMAIN-KEYWORD,usmart
+
+  # 嘉信证券 / Charles Schwab / thinkorswim
+  - DOMAIN-SUFFIX,schwab.com
+  - DOMAIN-SUFFIX,schwab.com.hk
+  - DOMAIN-SUFFIX,schwab.com.sg
+  - DOMAIN-SUFFIX,schwab.co.uk
+  - DOMAIN-SUFFIX,charlesschwab.com
+  - DOMAIN-SUFFIX,schwabcdn.com
+  - DOMAIN-SUFFIX,schwabnetwork.com
+  - DOMAIN-SUFFIX,thinkorswim.com
+  - DOMAIN-SUFFIX,tdameritrade.com
+  - DOMAIN-SUFFIX,ameritrade.com
+  - DOMAIN-KEYWORD,schwab
+  - DOMAIN-KEYWORD,thinkorswim
+
+  # BBAE
+  - DOMAIN-SUFFIX,bbae.com
+  - DOMAIN-SUFFIX,bbaecache.com
+  - DOMAIN-KEYWORD,bbae
+
+  # Firstrade
+  - DOMAIN-SUFFIX,firstrade.com
+  - DOMAIN-SUFFIX,firstrade.us
+  - DOMAIN-SUFFIX,firstrade.net
+  - DOMAIN-SUFFIX,firsttrade.com
+  - DOMAIN-SUFFIX,first-trade.com
+  - DOMAIN-KEYWORD,firstrade
