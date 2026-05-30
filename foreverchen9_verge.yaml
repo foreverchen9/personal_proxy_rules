@@ -226,7 +226,7 @@ proxy-groups:
       - 🇰🇷 韩国节点
       - 🌍 其他节点
       - DIRECT
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/global.png
+    icon: https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4b9.png
 
   - name: 💬 微信
     type: select
