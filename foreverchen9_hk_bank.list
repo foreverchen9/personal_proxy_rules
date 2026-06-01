@@ -40,6 +40,11 @@ DOMAIN-SUFFIX,hsbc.hk
 DOMAIN-SUFFIX,hsbchk.com
 DOMAIN-KEYWORD,hsbc
 
+# 恒生银行香港 Hang Seng Bank
+DOMAIN-SUFFIX,hangseng.com
+DOMAIN-SUFFIX,hangseng.com.hk
+DOMAIN-KEYWORD,hangseng
+
 # 兴业银行
 DOMAIN-SUFFIX,cib.com.cn
 DOMAIN-SUFFIX,cib.cn
