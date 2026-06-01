@@ -216,6 +216,7 @@ proxy-groups:
   - name: 💹 海外券商
     type: select
     proxies:
+      - DIRECT
       - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
       - 🇺🇸 美国节点
@@ -225,7 +226,6 @@ proxy-groups:
       - 🇹🇼 台湾节点
       - 🇰🇷 韩国节点
       - 🌍 其他节点
-      - DIRECT
     icon: https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4b9.png
 
   - name: 💬 微信
