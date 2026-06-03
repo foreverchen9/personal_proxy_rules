@@ -181,7 +181,7 @@ https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/forever
 可选：若不想直接暴露真实订阅，可自托管（如 Vercel/Netlify/Cloudflare Pages/Nginx）一份私密 URL，再在第2步填入该私密地址。
 
 #### Loon 海外券商家宽链式代理
-`foreverchen9_loon.conf` 内置了一个只出现在 `💹 海外券商` 策略组里的链式代理选项：`🇸🇬→🏠`。链路为 `🇸🇬 狮城节点 -> 家宽`，不会加入其他策略组。
+`foreverchen9_loon.conf` 内置链式代理选项：`🇸🇬→🏠`。链路为 `🇸🇬 狮城节点 -> 家宽`，可在所有手动策略组中选择；其中 `🏦 银行金融` 将它放在 `DIRECT` 后面，其他策略组将它放在最后。
 
 为避免公开仓库泄露账号密码，`家宽` 使用完全虚拟的占位配置。导入 Loon 后，在本地配置里把 host、port、账号和密码替换为你的真实家宽代理信息：
 ```conf
