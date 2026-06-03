@@ -228,6 +228,21 @@ proxy-groups:
       - 🌍 其他节点
     icon: https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4b9.png
 
+  - name: 🏦 银行金融
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌍 其他节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Domestic.png
+
   - name: 💬 微信
     type: select
     proxies:
@@ -530,7 +545,7 @@ rule-providers:
 # 规则配置 - 全部使用RULE-SET
 rules:
   - DOMAIN-SUFFIX,labuladong.online,🚀 节点选择
-  - RULE-SET,foreverchen9_hk_bank,DIRECT
+  - RULE-SET,foreverchen9_hk_bank,🏦 银行金融
   - RULE-SET,foreverchen9_overseas_broker,💹 海外券商
   - RULE-SET,GitHub,🚀 节点选择
   - RULE-SET,Spotify,🎵 Spotify音乐

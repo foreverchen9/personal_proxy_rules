@@ -32,7 +32,7 @@ rule-providers:
     path: ./ruleset/foreverchen9_hk_bank.yaml
 
 rules:
-  - RULE-SET,foreverchen9_hk_bank,DIRECT
+  - RULE-SET,foreverchen9_hk_bank,银行金融
 ```
 
 海外券商账户规则集示例：
@@ -134,7 +134,7 @@ git push origin main
 - **自动切换**：延迟超过容差自动切换到更优节点
 
 ### 规则优先级
-1. **银行金融规则**：最高优先级，确保银行服务稳定直连
+1. **银行金融规则**：最高优先级，默认直连，也可以在客户端里手动切换到节点；Loon 中所有手动策略组都可选择家宽链式代理
 2. **海外券商规则**：优先走“海外券商”策略组，默认直连并保留节点手动切换
 3. **应用特定规则**：针对不同应用优化的代理策略
 4. **地理位置规则**：基于IP地理位置的分流规则
