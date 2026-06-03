@@ -183,9 +183,9 @@ https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/forever
 #### Loon 海外券商家宽链式代理
 `foreverchen9_loon.conf` 内置了一个只出现在 `💹 海外券商` 策略组里的链式代理选项：`🇸🇬→🏠`。链路为 `🇸🇬 狮城节点 -> 家宽`，不会加入其他策略组。
 
-为避免公开仓库泄露账号密码，`家宽` 使用占位账号。导入 Loon 后，在本地配置里把以下字段替换为你的 1024proxy 账号信息：
+为避免公开仓库泄露账号密码，`家宽` 使用完全虚拟的占位配置。导入 Loon 后，在本地配置里把 host、port、账号和密码替换为你的真实家宽代理信息：
 ```conf
-家宽 = socks5,us.1024proxy.io,3000,replace-with-1024proxy-username,replace-with-1024proxy-password,udp=true
+家宽 = socks5,proxy.example.invalid,1080,replace-with-residential-proxy-username,replace-with-residential-proxy-password,udp=true
 ```
 
 替换后可用节点检测工具或 `ipinfo.io` 验证出口是否符合预期。
