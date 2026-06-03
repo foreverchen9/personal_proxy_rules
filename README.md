@@ -180,10 +180,18 @@ https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/forever
 
 可选：若不想直接暴露真实订阅，可自托管（如 Vercel/Netlify/Cloudflare Pages/Nginx）一份私密 URL，再在第2步填入该私密地址。
 
+#### Loon 海外券商家宽链式代理
+`foreverchen9_loon.conf` 内置了一个只出现在 `💹 海外券商` 策略组里的链式代理选项：`🇸🇬→🏠 家宽链式代理`。链路为 `🇸🇬 狮城节点 -> 🇺🇸 家宽 SOCKS5`，不会加入其他策略组。
+
+为避免公开仓库泄露账号密码，`🇺🇸 家宽 SOCKS5` 使用占位账号。导入 Loon 后，在本地配置里把以下字段替换为你的 1024proxy 账号信息：
+```conf
+🇺🇸 家宽 SOCKS5 = socks5,us.1024proxy.io,3000,replace-with-1024proxy-username,replace-with-1024proxy-password,udp=true
+```
+
+替换后可用节点检测工具或 `ipinfo.io` 验证出口是否符合预期。
+
 #### Loon 本地覆写模板
-如果希望与主配置分离真实订阅，可使用仓库内的覆写模板：
-- 文件：`overrideProxy_loon.conf`
-- 用法：复制到本地（不要提交），替换其中的占位符 URL，然后在 Loon 订阅页面为 `foreverchen9_loon.conf` 添加/关联该覆写文件，刷新后生效。
+如果希望与主配置分离真实订阅或家宽账号，可自行创建本地覆写文件（不要提交），替换其中的占位符 URL、账号和密码，然后在 Loon 订阅页面为 `foreverchen9_loon.conf` 添加/关联该覆写文件，刷新后生效。
 
 ### Clash Verge 专用配置
 用于 Clash Verge 的订阅链接：
