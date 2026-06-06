@@ -1,0 +1,41 @@
+# 香港券商账户代理规则集
+# 用于长桥、富途牛牛 / moomoo、盈立 / uSMART 等香港或新加坡券商
+
+payload:
+
+  # 长桥香港 / 长桥新加坡 / Longbridge / LongPort
+  - DOMAIN-SUFFIX,longbridge.com
+  - DOMAIN-SUFFIX,longbridge.hk
+  - DOMAIN-SUFFIX,longbridge.sg
+  - DOMAIN-SUFFIX,longbridge.global
+  - DOMAIN-SUFFIX,longbridgeapp.com
+  - DOMAIN-SUFFIX,longportapp.com
+  - DOMAIN-SUFFIX,longportwhale.com
+  - DOMAIN-SUFFIX,lbkrs.com
+  - DOMAIN-SUFFIX,lbctrl.com
+  - DOMAIN-KEYWORD,longbridge
+  - DOMAIN-KEYWORD,longport
+
+  # 富途牛牛香港 / Futu / Futubull / moomoo
+  - DOMAIN-SUFFIX,futuhk.com
+  - DOMAIN-SUFFIX,futunn.com
+  - DOMAIN-SUFFIX,futubull.com
+  - DOMAIN-SUFFIX,futu.com
+  - DOMAIN-SUFFIX,futuholdings.com
+  - DOMAIN-SUFFIX,futuie.com
+  - DOMAIN-SUFFIX,fututrust.com
+  - DOMAIN-SUFFIX,moomoo.com
+  - DOMAIN-SUFFIX,moomoo.io
+  - DOMAIN-SUFFIX,moomoo.com.hk
+  - DOMAIN-KEYWORD,futunn
+  - DOMAIN-KEYWORD,futubull
+  - DOMAIN-KEYWORD,moomoo
+
+  # 盈立香港 / 盈立新加坡 / uSMART
+  - DOMAIN-SUFFIX,usmart.sg
+  - DOMAIN-SUFFIX,usmartsecurities.com
+  - DOMAIN-SUFFIX,global.usmartsecurities.com
+  - DOMAIN-SUFFIX,usmart-app.com
+  - DOMAIN-SUFFIX,usmartglobal.com
+  - DOMAIN-SUFFIX,usmart8.com
+  - DOMAIN-KEYWORD,usmart

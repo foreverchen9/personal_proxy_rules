@@ -11,7 +11,9 @@
 
 ### 规则集文件
 - `foreverchen9_hk_bank.yaml` - 自定义规则集，包含银行和金融服务相关的域名规则
-- `foreverchen9_overseas_broker.yaml` - 自定义规则集，包含海外券商账户相关的域名规则
+- `foreverchen9_hk_broker.yaml` - 自定义规则集，包含香港 / 新加坡券商账户相关的域名规则
+- `foreverchen9_us_broker.yaml` - 自定义规则集，包含美国券商账户相关的域名规则
+- `foreverchen9_overseas_broker.yaml` - 旧版海外券商合集规则集，保留用于兼容旧订阅
 
 ## 如何使用
 
@@ -35,20 +37,28 @@ rules:
   - RULE-SET,foreverchen9_hk_bank,银行金融
 ```
 
-海外券商账户规则集示例：
+券商账户规则集示例：
 
 ```yaml
 rule-providers:
-  foreverchen9_overseas_broker:
+  foreverchen9_hk_broker:
     type: http
     behavior: classical
     format: yaml
     interval: 86400
-    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_overseas_broker.yaml
-    path: ./ruleset/foreverchen9_overseas_broker.yaml
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_hk_broker.yaml
+    path: ./ruleset/foreverchen9_hk_broker.yaml
+  foreverchen9_us_broker:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_us_broker.yaml
+    path: ./ruleset/foreverchen9_us_broker.yaml
 
 rules:
-  - RULE-SET,foreverchen9_overseas_broker,海外券商
+  - RULE-SET,foreverchen9_hk_broker,香港券商
+  - RULE-SET,foreverchen9_us_broker,美国券商
 ```
 
 ### 3. 使用模板创建新配置
@@ -90,19 +100,22 @@ rules:
 **中国内地银行**：
 - 兴业银行
 
-### 💹 海外券商账户规则集
+### 💹 券商账户规则集
 
-`foreverchen9_overseas_broker.yaml` / `foreverchen9_overseas_broker.list` 包含以下海外券商相关规则：
+`foreverchen9_hk_broker.yaml` / `foreverchen9_hk_broker.list` 包含以下香港 / 新加坡券商相关规则：
 
 - 长桥香港、长桥新加坡、Longbridge / LongPort
 - 富途牛牛香港、Futu / Futubull / moomoo
-- Interactive Brokers / IBKR
 - 盈立香港、盈立新加坡 / uSMART
+
+`foreverchen9_us_broker.yaml` / `foreverchen9_us_broker.list` 包含以下美国券商相关规则：
+
+- Interactive Brokers / IBKR
 - 嘉信证券 / Charles Schwab / thinkorswim
 - BBAE
 - Firstrade
 
-主配置中已新增“海外券商”策略组，默认优先直连，也可以在客户端里手动切换到香港、新加坡、美国等节点。
+主配置中已拆分“香港券商”和“美国券商”策略组，默认优先直连，也可以在客户端里分别手动切换到香港、新加坡、美国等节点。
 
 ### 添加新规则
 在 `foreverchen9_hk_bank.yaml` 的 `payload` 部分添加新规则：
@@ -114,7 +127,7 @@ payload:
   - DOMAIN,完整银行域名.com
 ```
 
-海外券商域名请添加到 `foreverchen9_overseas_broker.yaml` 的 `payload` 部分，并同步补到 `foreverchen9_overseas_broker.list`，方便 Loon 使用。
+香港 / 新加坡券商域名请添加到 `foreverchen9_hk_broker.yaml` 的 `payload` 部分，并同步补到 `foreverchen9_hk_broker.list`。美国券商域名请添加到 `foreverchen9_us_broker.yaml` 的 `payload` 部分，并同步补到 `foreverchen9_us_broker.list`，方便 Loon 使用。
 
 ## 推送到GitHub
 
@@ -136,7 +149,7 @@ git push origin main
 
 ### 规则优先级
 1. **银行金融规则**：最高优先级，默认直连，也可以在客户端里手动切换到节点；Loon 中所有手动策略组都可选择家宽链式代理
-2. **海外券商规则**：优先走“海外券商”策略组，默认直连并保留节点手动切换
+2. **券商账户规则**：按地区优先走“香港券商”或“美国券商”策略组，默认直连并保留节点手动切换
 3. **应用特定规则**：针对不同应用优化的代理策略
 4. **地理位置规则**：基于IP地理位置的分流规则
 5. **兜底规则**：未匹配规则的默认处理
@@ -181,8 +194,8 @@ https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/forever
 
 可选：若不想直接暴露真实订阅，可自托管（如 Vercel/Netlify/Cloudflare Pages/Nginx）一份私密 URL，再在第2步填入该私密地址。
 
-#### Loon 海外券商家宽链式代理
-`foreverchen9_loon.conf` 内置链式代理选项：`🇸🇬→🏠`。链路为 `🇸🇬 狮城节点 -> 家宽`，可在所有手动策略组中选择；其中 `💹 海外券商` 和 `🏦 银行金融` 将它放在 `DIRECT` 后面，其他策略组将它放在最后。
+#### Loon 券商家宽链式代理
+`foreverchen9_loon.conf` 内置链式代理选项：`🇸🇬→🏠`。链路为 `🇸🇬 狮城节点 -> 家宽`，可在所有手动策略组中选择；其中 `💹 香港券商`、`📈 美国券商` 和 `🏦 银行金融` 将它放在券商 / 银行策略组的靠前位置，其他策略组将它放在最后。
 
 这是一个预留配置。公开配置中没有启用名为 `家宽` 的本地节点，因此直接选择 `🇸🇬→🏠` 前，需要先在 Loon 本地配置的 `[Proxy]` 段手动添加节点，节点名称必须为 `家宽`。
 
@@ -248,7 +261,8 @@ https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/forever
 - **📹 油管视频**：YouTube专用代理组
 - **📱 Instagram**：Instagram专用代理组
 - **🐦 Twitter**：Twitter专用代理组
-- **💹 海外券商**：境外券商账户专用代理组（默认直连）
+- **💹 香港券商**：香港 / 新加坡券商账户专用代理组（默认直连）
+- **📈 美国券商**：美国券商账户专用代理组（默认直连）
 - **💬 WeChat**：微信专用代理组（优先直连）
 
 ## 📝 更新日志

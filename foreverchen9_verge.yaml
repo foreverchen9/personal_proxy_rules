@@ -213,20 +213,35 @@ proxy-groups:
       - 🇰🇷 韩国节点
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/twitter.png
 
-  - name: 💹 海外券商
+  - name: 💹 香港券商
     type: select
     proxies:
       - DIRECT
       - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
       - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🌍 其他节点
+    icon: https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4b9.png
+
+  - name: 📈 美国券商
+    type: select
+    proxies:
+      - DIRECT
+      - 🇺🇸 美国节点
+      - 🇭🇰 香港节点
+      - 🇸🇬 狮城节点
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇯🇵 日本节点
       - 🇹🇼 台湾节点
       - 🇰🇷 韩国节点
       - 🌍 其他节点
-    icon: https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4b9.png
+    icon: https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4c8.png
 
   - name: 🏦 银行金融
     type: select
@@ -533,20 +548,30 @@ rule-providers:
     url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_hk_bank.yaml
     path: ./ruleset/foreverchen9_hk_bank.yaml
 
-  # 自定义海外券商账户规则集
-  foreverchen9_overseas_broker:
+  # 自定义香港券商账户规则集
+  foreverchen9_hk_broker:
     type: http
     behavior: classical
     format: yaml
     interval: 3600
-    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_overseas_broker.yaml
-    path: ./ruleset/foreverchen9_overseas_broker.yaml
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_hk_broker.yaml
+    path: ./ruleset/foreverchen9_hk_broker.yaml
+
+  # 自定义美国券商账户规则集
+  foreverchen9_us_broker:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 3600
+    url: https://raw.githubusercontent.com/foreverchen9/personal_proxy_rules/main/foreverchen9_us_broker.yaml
+    path: ./ruleset/foreverchen9_us_broker.yaml
 
 # 规则配置 - 全部使用RULE-SET
 rules:
   - DOMAIN-SUFFIX,labuladong.online,🚀 节点选择
   - RULE-SET,foreverchen9_hk_bank,🏦 银行金融
-  - RULE-SET,foreverchen9_overseas_broker,💹 海外券商
+  - RULE-SET,foreverchen9_hk_broker,💹 香港券商
+  - RULE-SET,foreverchen9_us_broker,📈 美国券商
   - RULE-SET,GitHub,🚀 节点选择
   - RULE-SET,Spotify,🎵 Spotify音乐
   - RULE-SET,Apple,🍎 苹果服务
