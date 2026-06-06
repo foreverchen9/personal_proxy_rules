@@ -33,6 +33,10 @@ payload:
   # EleBank 象象银行
   - DOMAIN-SUFFIX,elebank.com
   - DOMAIN-KEYWORD,elebank
+
+  # 蚂蚁银行香港 Ant Bank HK
+  - DOMAIN-SUFFIX,antbank.hk
+  - DOMAIN-KEYWORD,antbank
   
   # 中银香港 BOCHK
   - DOMAIN-SUFFIX,bochk.com

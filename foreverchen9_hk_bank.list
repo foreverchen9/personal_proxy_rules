@@ -28,6 +28,10 @@ DOMAIN-KEYWORD,airstar
 DOMAIN-SUFFIX,elebank.com
 DOMAIN-KEYWORD,elebank
 
+# 蚂蚁银行香港 Ant Bank HK
+DOMAIN-SUFFIX,antbank.hk
+DOMAIN-KEYWORD,antbank
+
 # 中银香港 BOCHK
 DOMAIN-SUFFIX,bochk.com
 DOMAIN-SUFFIX,boc.hk

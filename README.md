@@ -79,6 +79,7 @@ rules:
 - WeLab Bank
 - ZA Bank（众安银行）
 - Airstar Bank（天星银行）
+- Ant Bank HK（蚂蚁银行香港）
 - BOCHK（中银香港）
 - HSBC HK（汇丰银行香港）
 
