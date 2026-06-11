@@ -3,23 +3,23 @@
 
 payload:
 
-  # Interactive Brokers / IBKR
-  - DOMAIN-SUFFIX,interactivebrokers.com
-  - DOMAIN-SUFFIX,interactivebrokers.com.hk
-  - DOMAIN-SUFFIX,interactivebrokers.hk
-  - DOMAIN-SUFFIX,interactivebrokers.com.sg
-  - DOMAIN-SUFFIX,interactivebrokers.co.uk
-  - DOMAIN-SUFFIX,interactivebrokers.ie
-  - DOMAIN-SUFFIX,interactivebrokers.eu
-  - DOMAIN-SUFFIX,ibkr.com
-  - DOMAIN-SUFFIX,ibkr.com.sg
-  - DOMAIN-SUFFIX,ibkrcampus.com
-  - DOMAIN-SUFFIX,ibkrguides.com
-  - DOMAIN-SUFFIX,ibkram.com
-  - DOMAIN-SUFFIX,clientam.com
-  - DOMAIN-SUFFIX,portfolioanalyst.com
-  - DOMAIN-KEYWORD,interactivebrokers
-  - DOMAIN-KEYWORD,ibkr
+  # Interactive Brokers / IBKR (暂时注释)
+  # - DOMAIN-SUFFIX,interactivebrokers.com
+  # - DOMAIN-SUFFIX,interactivebrokers.com.hk
+  # - DOMAIN-SUFFIX,interactivebrokers.hk
+  # - DOMAIN-SUFFIX,interactivebrokers.com.sg
+  # - DOMAIN-SUFFIX,interactivebrokers.co.uk
+  # - DOMAIN-SUFFIX,interactivebrokers.ie
+  # - DOMAIN-SUFFIX,interactivebrokers.eu
+  # - DOMAIN-SUFFIX,ibkr.com
+  # - DOMAIN-SUFFIX,ibkr.com.sg
+  # - DOMAIN-SUFFIX,ibkrcampus.com
+  # - DOMAIN-SUFFIX,ibkrguides.com
+  # - DOMAIN-SUFFIX,ibkram.com
+  # - DOMAIN-SUFFIX,clientam.com
+  # - DOMAIN-SUFFIX,portfolioanalyst.com
+  # - DOMAIN-KEYWORD,interactivebrokers
+  # - DOMAIN-KEYWORD,ibkr
 
   # 嘉信证券 / Charles Schwab / thinkorswim
   - DOMAIN-SUFFIX,schwab.com
